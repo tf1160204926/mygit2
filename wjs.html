@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>微金所首页</title>
+    <!-- 注意。这里因为没有自己封装的向下的箭头和电话，所以要用到官网的图标字体，那么引用的时候要整个都引用，因为这个css还和其他的例如svg文件有关联，所以不能自己随便复制一个。这个没法把这个箭头封装在自己的图标字体库中，因为美工给的哪些svg，woff等文件中没有这个箭头的代号，所以只能找官网上的类名 -->
+    <link href="bootstrap-3.3.7/dist/css/bootstrap.css" rel="stylesheet">
+    <!-- bootstrap中没有的图标字体，在font-Awesome-3.2.1中 -->
+    <link rel="stylesheet" href="Font-Awesome-3.2.1/Font-Awesome-3.2.1/css/font-awesome.css" />
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <!-- 书写页面 -->
+    <!-- 顶部通栏 全局css样式的栅格系统里面-->
+    <div class="header hidden-md hidden-sm hidden-xs">
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="col-lg-2"><span class="wjs_font wjs_phone"></span><a class="phone" href="#">手机微金所</a><span class="glyphicon glyphicon-menu-down"></span>
+                    <div class="erweima"></div>
+                </div>
+                <div class="col-lg-5"><span class="glyphicon glyphicon-phone-alt"></span><a href="#">4006-89-4006（服务时间：9:00-21:00)</a></div>
+                <div class="col-lg-2"><a href="#">常见问题</a><a href="#">财富登录</a></div>
+                <div class="col-lg-3">
+                    <div class="btn btn-danger btn-xs">免费注册</div><a href="#">登录</a></div>
+            </div>
+        </div>
+    </div>
+    <!-- 导航栏 组件的导航条中-->
+    <div class='nav'>
+        <nav class="navbar wjs_default" role="navigation">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                            <span class='wjs_font wjs_logo'></span><span class='wjs_font wjs_word'></span>
+                        </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">我要投资</a></li>
+                        <li><a href="#">我要接待</a></li>
+                        <li><a href="#">投资介绍</a></li>
+                        <li><a href="#">平台介绍</a></li>
+                        <li><a href="#">内容介绍</a></li>
+                        <li><a href="#">介绍介绍</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right hidden-sm hidden-xs">
+                        <li><a href="#">个人中心</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    </div>
+    <!-- 轮播图部分 bootstrap的javascript插件的carousel中-->
+    <div class="banner">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <!-- 大屏幕上用 ,注意，大屏幕和小屏幕用的两个class不一样-->
+                    <a href="#" class="banner_a al hidden-xs "></a>
+                    <!-- 小屏幕上用 -->
+                    <a href="#" class="as hidden-lg hidden-md hidden-sm"><img src="images/slide_01_640x340.jpg" alt=""></a>
+                </div>
+                <div class="item">
+                    <!-- 大屏幕上用 -->
+                    <a href="#" class="banner_a bl hidden-xs "></a>
+                    <!-- 小屏幕上用 -->
+                    <a href="#" class="bs hidden-lg hidden-md hidden-sm"><img src="images/slide_02_640x340.jpg" alt=""></a>
+                </div>
+                <div class="item">
+                    <!-- 大屏幕上用 -->
+                    <a href="#" class="banner_a cl hidden-xs "></a>
+                    <!-- 小屏幕上用 -->
+                    <a href="#" class="cs hidden-lg hidden-md hidden-sm"><img src="images/slide_03_640x340.jpg" alt=""></a>
+                </div>
+                <div class="item">
+                    <!-- 大屏幕上用 -->
+                    <a href="#" class="banner_a dl hidden-xs "></a>
+                    <!-- 小屏幕上用 -->
+                    <a href="#" class="ds hidden-lg hidden-md hidden-sm"><img src="images/slide_04_640x340.jpg" alt=""></a>
+                </div>
+            </div>
+            <!--   Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+             <span class="glyphicon glyphicon-chevron-left"></span>
+             <span class="sr-only">Previous</span>
+         </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+             <span class="glyphicon glyphicon-chevron-right"></span>
+             <span class="sr-only">Next</span>
+         </a>
+        </div>
+    </div>
+    <!-- 信息列表部分 组件的媒体对象中-->
+    <!-- 先用栅格系统进行分列 -->
+    <div class="info hidden-xs hidden-sm">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="media">
+                        <a href="#">
+                            <div class="media-left">
+                                <!-- a标签不能嵌套a标签，否则浏览器会当做兄弟标签，这里的a标签在bootstrap中已经给了display：table-cell，所以可以用div代替，在外面用a把这些包起来 -->
+                                <div href="#" class="ico wjs_font wjs_E900"></div>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">支付宝交易保障</h4>
+                                <span>银联支付安全有保障</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="media">
+                        <a href="">
+                            <div class="media-left">
+                                <!-- a标签不能嵌套a标签，否则浏览器会当做兄弟标签，这里的a标签在bootstrap中已经给了display：table-cell，所以可以用div代替，在外面用a把这些包起来 -->
+                                <div href="#" class="ico wjs_font wjs_E901"></div>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">支付宝交易保障</h4>
+                                <span>银联支付安全有保障</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="media">
+                        <a href="">
+                            <div class="media-left">
+                                <!-- a标签不能嵌套a标签，否则浏览器会当做兄弟标签，这里的a标签在bootstrap中已经给了display：table-cell，所以可以用div代替，在外面用a把这些包起来 -->
+                                <div href="#" class="ico wjs_font wjs_E903"></div>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">支付宝交易保障</h4>
+                                <span>银联支付安全有保障</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="media">
+                        <a href="">
+                            <div class="media-left">
+                                <!-- a标签不能嵌套a标签，否则浏览器会当做兄弟标签，这里的a标签在bootstrap中已经给了display：table-cell，所以可以用div代替，在外面用a把这些包起来 -->
+                                <div href="#" class="ico wjs_font wjs_E904"></div>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">支付宝交易保障</h4>
+                                <span>银联支付安全有保障</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="media">
+                        <a href="">
+                            <div class="media-left">
+                                <!-- a标签不能嵌套a标签，否则浏览器会当做兄弟标签，这里的a标签在bootstrap中已经给了display：table-cell，所以可以用div代替，在外面用a把这些包起来 -->
+                                <div href="#" class="ico glyphicon glyphicon-user"></div>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">支付宝交易保障</h4>
+                                <span>银联支付安全有保障</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="media">
+                        <a href="">
+                            <div class="media-left">
+                                <!-- a标签不能嵌套a标签，否则浏览器会当做兄弟标签，这里的a标签在bootstrap中已经给了display：table-cell，所以可以用div代替，在外面用a把这些包起来 -->
+                                <div href="#" class="ico wjs_font wjs_E907"></div>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">支付宝交易保障</h4>
+                                <span>银联支付安全有保障</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 预约界面 -->
+    <!-- 用的是container栅格的浮动 -->
+    <div class="book">
+        <div class="container">
+            <div class="pull-left">
+                <span class="wjs_font wjs_E906"></span> 现在有 273 人在排队，累计预约交易成功 7571 次。 什么是预约投标？
+                <a href="#" class="fast">立即预约</a>
+            </div>
+            <div class="pull-right hidden-xs hidden-sm">
+                <span class="glyphicon glyphicon-camera"></span>
+                <a href="#">微金所企业宣传片</a>
+            </div>
+        </div>
+    </div>
+    <!-- tab标签栏 -->
+    <!-- 用的是javascript插件的标签页 -->
+    <div class="tuijian">
+        <!-- Nav tabs -->
+        <ul class="nav wjs-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">特别推荐</a></li>
+            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">微投资</a></li>
+            <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">福利</a></li>
+            <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">今日优惠</a></li>
+            <li role="presentation"><a href="#more" aria-controls="settings" role="tab" data-toggle="tab">活动</a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="home">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <a href="#" class="a1 yhq">
+                                <div class="right">
+                                    <p class="year">年利率</p>
+                                    <p class="number">8%</p>
+                                </div>
+                                <div class="left">
+                                    <span class="ico wjs_font wjs_E915"></span>
+                                    <h3>新手第121期</h3>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">200万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">200万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">200万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">200万</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <a href="#" class="a2 yhq">
+                                <div class="right">
+                                    <p class="year">年利率</p>
+                                    <p class="number">8%</p>
+                                </div>
+                                <div class="left">
+                                    <h3>新手第122期</h3>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">150万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">23万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">20万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">45万</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <a href="#" class="a3 yhq">
+                                <div class="right">
+                                    <p class="year">年利率</p>
+                                    <p class="number">8%</p>
+                                </div>
+                                <div class="left">
+                                    <h3>新手第123期</h3>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">255万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">208万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">40万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">500万</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <a href="#" class="a4 yhq">
+                                <div class="right">
+                                    <p class="year">年利率</p>
+                                    <p class="number">8%</p>
+                                </div>
+                                <div class="left">
+                                    <h3>新手第124期</h3>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">274万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">25万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">78万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">460万</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="profile">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <a href="#" class="a4 yhq">
+                                <div class="right">
+                                    <p class="year">年利率</p>
+                                    <p class="number">8%</p>
+                                </div>
+                                <div class="left">
+                                    <h3>新手第124期</h3>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">274万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">25万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">78万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">460万</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <a href="#" class="a4 yhq">
+                                <div class="right">
+                                    <p class="year">年利率</p>
+                                    <p class="number">8%</p>
+                                </div>
+                                <div class="left">
+                                    <h3>新手第124期</h3>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">274万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">25万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">78万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">460万</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <a href="#" class="a4 yhq">
+                                <div class="right">
+                                    <p class="year">年利率</p>
+                                    <p class="number">8%</p>
+                                </div>
+                                <div class="left">
+                                    <h3>新手第124期</h3>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">274万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">25万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">78万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">460万</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <a href="#" class="a4 yhq">
+                                <div class="right">
+                                    <p class="year">年利率</p>
+                                    <p class="number">8%</p>
+                                </div>
+                                <div class="left">
+                                    <h3>新手第124期</h3>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">274万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">25万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">78万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">460万</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="messages">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <a href="#" class="a4 yhq">
+                                <div class="right">
+                                    <p class="year">年利率</p>
+                                    <p class="number">8%</p>
+                                </div>
+                                <div class="left">
+                                    <h3>新手第124期</h3>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">274万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">25万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">78万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">460万</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <a href="#" class="a4 yhq">
+                                <div class="right">
+                                    <p class="year">年利率</p>
+                                    <p class="number">8%</p>
+                                </div>
+                                <div class="left">
+                                    <h3>新手第124期</h3>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">274万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">25万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">78万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">460万</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <a href="#" class="a4 yhq">
+                                <div class="right">
+                                    <p class="year">年利率</p>
+                                    <p class="number">8%</p>
+                                </div>
+                                <div class="left">
+                                    <h3>新手第124期</h3>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">274万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">25万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">78万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">460万</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <a href="#" class="a4 yhq">
+                                <div class="right">
+                                    <p class="year">年利率</p>
+                                    <p class="number">8%</p>
+                                </div>
+                                <div class="left">
+                                    <h3>新手第124期</h3>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">274万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">25万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">78万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">460万</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="settings">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <a href="#" class="a4 yhq">
+                                <div class="right">
+                                    <p class="year">年利率</p>
+                                    <p class="number">8%</p>
+                                </div>
+                                <div class="left">
+                                    <h3>新手第124期</h3>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">274万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">25万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">78万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">460万</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <a href="#" class="a4 yhq">
+                                <div class="right">
+                                    <p class="year">年利率</p>
+                                    <p class="number">8%</p>
+                                </div>
+                                <div class="left">
+                                    <h3>新手第124期</h3>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">274万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">25万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">78万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">460万</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <a href="#" class="a4 yhq">
+                                <div class="right">
+                                    <p class="year">年利率</p>
+                                    <p class="number">8%</p>
+                                </div>
+                                <div class="left">
+                                    <h3>新手第124期</h3>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">274万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">25万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">78万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">460万</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <a href="#" class="a4 yhq">
+                                <div class="right">
+                                    <p class="year">年利率</p>
+                                    <p class="number">8%</p>
+                                </div>
+                                <div class="left">
+                                    <h3>新手第124期</h3>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">274万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">25万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">78万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">460万</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="more">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <a href="#" class="a4 yhq">
+                                <div class="right">
+                                    <p class="year">年利率</p>
+                                    <p class="number">8%</p>
+                                </div>
+                                <div class="left">
+                                    <h3>新手第124期</h3>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">274万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">25万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">78万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">460万</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <a href="#" class="a4 yhq">
+                                <div class="right">
+                                    <p class="year">年利率</p>
+                                    <p class="number">8%</p>
+                                </div>
+                                <div class="left">
+                                    <h3>新手第124期</h3>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">274万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">25万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">78万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">460万</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <a href="#" class="a4 yhq">
+                                <div class="right">
+                                    <p class="year">年利率</p>
+                                    <p class="number">8%</p>
+                                </div>
+                                <div class="left">
+                                    <h3>新手第124期</h3>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">274万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">25万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">78万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">460万</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <a href="#" class="a4 yhq">
+                                <div class="right">
+                                    <p class="year">年利率</p>
+                                    <p class="number">8%</p>
+                                </div>
+                                <div class="left">
+                                    <h3>新手第124期</h3>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">274万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">25万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">78万</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <p class="start">起投金额</p>
+                                        <p class="money">460万</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 新闻部分 -->
+    <div class="news">
+        <!-- 先用的是栅格的列偏移 -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2 col-lg-offset-2">
+                    <div class="title">全部新闻</div>
+                </div>
+                <div class="col-lg-2">
+                    <!-- Nav tabs -->
+                    <ul class="nav my-tabs" role="tablist">
+                        <div class="line"></div>
+                        <li role="presentation" class="active"><a href="#home1" aria-controls="home" role="tab" data-toggle="tab"><span class="wjs_font wjs_new01"></span></a></li>
+                        <li role="presentation"><a href="#profile1" aria-controls="profile" role="tab" data-toggle="tab"><span class="wjs_font wjs_new02"></span></a></li>
+                        <li role="presentation"><a href="#messages1" aria-controls="messages" role="tab" data-toggle="tab"><span class="wjs_font wjs_new03"></span></a></li>
+                        <li role="presentation"><a href="#settings1" aria-controls="settings" role="tab" data-toggle="tab"><span class="wjs_font wjs_new04"></span></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 four">
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="home1">
+                            <ul class="home">
+                                <li><a href="#">2016-9-19 【微还款】一周还款公告2016年1月18日-1月24日</a></li>
+                                <li><a href="#">2016-9-19 【微还款】一周还款公告2016年1月18日-1月24日</a></li>
+                                <li><a href="#">2016-9-19 【微还款】一周还款公告2016年1月18日-1月24日</a></li>
+                                <li><a href="#">2016-9-19 【微还款】一周还款公告2016年1月18日-1月24日</a></li>
+                                <li><a href="#">2016-9-19 【微还款】一周还款公告2016年1月18日-1月24日</a></li>
+                                <li><a href="#">2016-9-19 【微还款】一周还款公告2016年1月18日-1月24日</a></li>
+                                <li><a href="#">2016-9-19 【微还款】一周还款公告2016年1月18日-1月24日</a></li>
+                                <li><a href="#">2016-9-19 【微还款】一周还款公告2016年1月18日-1月24日</a></li>
+                                <li><a href="#">2016-9-19 【微还款】一周还款公告2016年1月18日-1月24日</a></li>
+                                <li><a href="#">2016-9-19 【微还款】一周还款公告2016年1月18日-1月24日</a></li>
+                                <li><a href="#">2016-9-19 【微还款】一周还款公告2016年1月18日-1月24日</a></li>
+                                <li><a href="#">2016-9-19 【微还款】一周还款公告2016年1月18日-1月24日</a></li>
+                            </ul>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="profile1">
+                            <ul class="profile">
+                                <li><a href="">探营微金所：首发民间利率指数的互联网金融平台</a></li>
+                                <li><a href="#">微金所引入保险机制，或成平台助推器</a></li>
+                                <li><a href="#">微金所CEO袁翔：“互联网+”未改变商品本质</a></li>
+                                <li><a href="#">P2P新博弈 用户体验是王道</a></li>
+                                <li><a href="#">微金所民间利率市场化报告国内首发</a></li>
+                                <li><a href="#">微金所范忠民：为小微企业建立信用尺码</a></li>
+                                <li><a href="#">微金所隋月恒：做栖身于互联网金融的女人</a></li>
+                                <li><a href="">从担保之殇看P2P平台未来的竞争力</a></li>
+                            </ul>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="messages1">
+                            <a href="#" class="voice">
+                                <div class="container-fluid">
+                                    <div class="row bigrow">
+                                        <div class="col-lg-3 col-md-3 col-sm-3 left">
+                                            <h3>中期稳健</h3>
+                                            <p class="month">4-9个月期限</p>
+                                            <span class="order">预约投标</span>
+                                            <span class="more">查看更多</span>
+                                        </div>
+                                        <div class="col-lg-9 col-md-9 col-sm-9 right">
+                                            <div class="top">
+                                                <h4>微金所1月期</h4>
+                                                <span>明星产品</span>
+                                                <p>月付息到期还本</p>
+                                                <!-- 这里用的是javascript插件的toolTips的 -->
+                                                <button type="button" class="btn btn-default protect" data-toggle="tooltip" data-placement="bottom" title="担保">保</button>
+                                                <button type="button" class="btn btn-default offset" data-toggle="tooltip" data-placement="bottom" title="车辆抵押">抵</button>
+                                            </div>
+                                            <div class="center">
+                                                <div class="container-fluid">
+                                                    <div class="row smallrow">
+                                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                                            <p><span>6.50</span>%</p>
+                                                            <p>策算年化收益率</p>
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                                            <p><span>1</span>个月</p>
+                                                            <p>借款期限</p>
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4 col-sm-4 last">
+                                                            <p><span>0</span>万</p>
+                                                            <p>可投金额</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="cell">
+                                                    已售罄
+                                                </div>
+                                            </div>
+                                            <div class="bottom">
+                                                <button type="button" class="btn btn-primary btn-sm">立即投资</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="settings1">
+                            <div class="first">
+                                <h4><a href="#">微金所头条</a></h4>
+                                <a href="#">更多>></a>
+                            </div>
+                            <ul class="settings">
+                                <li><a href="#">【微公告】2017年10月31日微金所平台系统升级维护公告</a></li>
+                                <li><a href="#">【微还款】2017年10月23日-2017年10月29日还款公告</a></li>
+                                <li><a href="#">【微公告】关于国庆活动礼品受物流影响的通知</a></li>
+                                <li><a href="#">【微还款】2017年10月16日-2017年10月22日还款公告</a></li>
+                                <li><a href="#">【微还款】一周还款公告2017年10月9日-2017年10月15日</a></li>
+                                <li><a href="#">【微动态】邀请好友投5000红包马上有！</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer底部 -->
+    <div class="footer">
+        <div class="link">
+            <div class="container-fluid">
+                <div class="row footrow">
+                    <div class="col-lg-3 col-md-3 col-sm-3 left">
+                        <!-- 左侧客服 -->
+                        <div class="l1">
+                            <span class='wjs_font wjs_logo'></span><span class='wjs_font wjs_word'></span>
+                        </div>
+                        <div class="l2">
+                            4006-89-4006010-53563799
+                        </div>
+                        <div class="l3">
+                            服务热线(服务时间:9:00----21:00)
+                        </div>
+                        <div class="l4">
+                            <a href="#" title="">
+                                <svg class="myicon_font" aria-hidden="true">
+                                    <use xlink:href="#icon-kefu3"></use>
+                                </svg>在线客服</a>
+                        </div>
+                        <div class="l5">
+                            关注我们:
+                            <a href="#" title="">
+                                <svg class="myicon_font" aria-hidden="true">
+                                    <use xlink:href="#icon-weibo"></use>
+                                </svg>
+                            </a>
+                            <a href="#" title="">
+                                <svg class="myicon_font" aria-hidden="true">
+                                    <use xlink:href="#icon-qqkaobei"></use>
+                                </svg>
+                            </a>
+                            <a href="#" title="" class="myiconfont" style="color:green;font-size: 18px;text-decoration: none">&#xe668;
+                            </a>
+                        </div>
+                        <div class="l6">
+                            <img src="images/gswj.png" alt="">
+                        </div>
+                        <!-- 中间关于我们 -->
+                        <!-- 右边图标 -->
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5 center">
+                        <dl>
+                            <dd>在线客服 </dd>
+                            <dt><a href="#">合作伙伴</a></dt>
+                            <dt><a href="#">
+友情链接</a></dt>
+                            <dt><a href="#">联系我们</a></dt>
+                            <dt><a href="#">最新动态</a></dt>
+                        </dl>
+                        <dl>
+                            <dd>关注我门</dd>
+                            <dt><a href="#">媒体报道</a></dt>
+                            <dt><a href="#">公司动态
+</a></dt>
+                            <dt><a href="#">利率报告
+</a></dt>
+                            <dt><a href="#">更新历史
+</a></dt>
+                            <dt><a href="#">安全保障
+</a></dt>
+                        </dl>
+                        <dl>
+                            <dd>关于我们</dd>
+                            <dt><a href="#">帮助中心
+</a></dt>
+                            <dt><a href="#">新手指引
+</a></dt>
+                            <dt><a href="#">安全保障
+</a></dt>
+                            <dt><a href="#">操作指南
+</a></dt>
+                        </dl>
+                        <dl>
+                            <dd>公司介绍</dd>
+                            <dt><a href="#">VIP投资人 
+</a></dt>
+                            <dt><a href="#">管理团队</a></dt>
+                            <dt><a href="#">新手指引</a></dt>
+                            <dt><a href="#">公司动态</a></dt>
+                        </dl>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 right">
+                        <dl>
+                            <dd>合作伙伴</dd>
+                            <dt><a href="#" class="wjs_font wjs_partner01"></a></dt>
+                            <dt><a href="#" class="wjs_font wjs_partner02"></a></dt>
+                            <dt><a href="#" class="wjs_font wjs_partner03"></a></dt>
+                            <dt><a href="#" class="wjs_font wjs_partner04"></a></dt>
+                            <dt><a href="#" class="wjs_font wjs_partner05"></a></dt>
+                            <dt><a href="#" class="wjs_font wjs_partner06"></a></dt>
+                            <dt><a href="#" class="wjs_font wjs_partner07"></a></dt>
+                            <dt><a href="#" class="wjs_font wjs_partner08"></a></dt>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="friend">
+            <div class="container-fluid">
+                <div class="row bottomrow">
+                    <div class="col-lg-1 col-md-1 col-sm-1"><a href="#" class="wjs_font wjs_partner08"></a></div>
+                    <div class="col-lg-1 col-md-1 col-sm-1"><a href="#" class="wjs_font wjs_partner07"></a></div>
+                    <div class="col-lg-1 col-md-1 col-sm-1"><a href="#" class="wjs_font wjs_partner06"></a></div>
+                    <div class="col-lg-1 col-md-1 col-sm-1"><a href="#" class="wjs_font wjs_partner05"></a></div>
+                    <div class="col-lg-1 col-md-1 col-sm-1"><a href="#" class="wjs_font wjs_partner04"></a></div>
+                    <div class="col-lg-1 col-md-1 col-sm-1"><a href="#" class="wjs_font wjs_partner03"></a></div>
+                    <div class="col-lg-1 col-md-1 col-sm-1"><a href="#" class="wjs_font wjs_partner02"></a></div>
+                    <div class="col-lg-1 col-md-1 col-sm-1"><a href="#" class="wjs_font wjs_partner01"></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="font/iconfont.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,766 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body,
+html {
+  width: 100%;
+}
+.header {
+  margin-top: 10px;
+  position: relative;
+}
+.header .container-fluid .row > div {
+  border: 2px solid #aaa;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+.header .container-fluid .row > div a {
+  text-decoration: none;
+  margin: 0 8px;
+  color: #777;
+}
+.header:nth-child(1) {
+  position: relative;
+}
+.header:nth-child(1) .erweima {
+  width: 120px;
+  height: 136px;
+  position: absolute;
+  background: url("../images/code.jpg") no-repeat;
+  top: 40px;
+  left: 50px;
+  display: none;
+}
+.header:nth-child(1):hover .erweima {
+  display: block;
+  z-index: 20;
+}
+/*导航栏自己封装*/
+.wjs_default {
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
+}
+.wjs_default .navbar-brand {
+  color: #777;
+  height: 80px;
+  line-height: 50px;
+}
+.wjs_default .navbar-brand span {
+  font-size: 50px;
+}
+.wjs_default .navbar-brand span:first-child {
+  color: red;
+}
+.wjs_default .navbar-brand span:last-child {
+  color: black;
+}
+.wjs_default .navbar-brand:hover,
+.wjs_default .navbar-brand:focus {
+  color: #5e5e5e;
+  background-color: transparent;
+}
+.wjs_default .navbar-text {
+  color: #777;
+}
+.wjs_default .navbar-nav > li > a {
+  color: #777;
+  height: 80px;
+  line-height: 50px;
+}
+.wjs_default .navbar-nav > li > a:hover,
+.wjs_default .navbar-nav > li > a:focus {
+  color: #333;
+  background-color: transparent;
+  border-bottom: 3px solid red;
+}
+.wjs_default .navbar-nav > .active > a,
+.wjs_default .navbar-nav > .active > a:hover,
+.wjs_default .navbar-nav > .active > a:focus {
+  color: #555;
+}
+.wjs_default .navbar-nav > .disabled > a,
+.wjs_default .navbar-nav > .disabled > a:hover,
+.wjs_default .navbar-nav > .disabled > a:focus {
+  color: #ccc;
+  background-color: transparent;
+}
+.wjs_default .navbar-toggle {
+  border-color: #ddd;
+}
+.wjs_default .navbar-toggle:hover,
+.wjs_default .navbar-toggle:focus {
+  background-color: #ddd;
+}
+.wjs_default .navbar-toggle .icon-bar {
+  background-color: #888;
+}
+.wjs_default .navbar-collapse,
+.wjs_default .navbar-form {
+  border-color: #e7e7e7;
+}
+.wjs_default .navbar-nav > .open > a,
+.wjs_default .navbar-nav > .open > a:hover,
+.wjs_default .navbar-nav > .open > a:focus {
+  color: #555;
+  background-color: #e7e7e7;
+}
+@media (max-width: 767px) {
+  .wjs_default .navbar-nav .open .dropdown-menu > li > a {
+    color: #777;
+  }
+  .wjs_default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .wjs_default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #333;
+    background-color: transparent;
+  }
+  .wjs_default .navbar-nav .open .dropdown-menu > .active > a,
+  .wjs_default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .wjs_default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+  }
+  .wjs_default .navbar-nav .open .dropdown-menu > .disabled > a,
+  .wjs_default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .wjs_default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+  }
+}
+.wjs_default .navbar-link {
+  color: #777;
+}
+.wjs_default .navbar-link:hover {
+  color: #333;
+}
+.wjs_default .btn-link {
+  color: #777;
+}
+.wjs_default .btn-link:hover,
+.wjs_default .btn-link:focus {
+  color: #333;
+}
+.wjs_default .btn-link[disabled]:hover,
+fieldset[disabled] .wjs_default .btn-link:hover,
+.wjs_default .btn-link[disabled]:focus,
+fieldset[disabled] .wjs_default .btn-link:focus {
+  color: #ccc;
+}
+.navbar {
+  margin-bottom: 0;
+}
+/*轮播图部分*/
+.banner {
+  position: relative;
+}
+.banner .item .banner_a {
+  height: 410px;
+  background-size: cover;
+  display: block;
+  background-repeat: no-repeat;
+  /*大图片当做背景，居中，实际上土坯哦按很大，超过了屏幕，但用户看到的仅仅是中间，小图片直接插入图片就可以了*/
+}
+.banner .item .banner_a.al {
+  background: url("../images/slide_01_2000x410.jpg") center;
+}
+.banner .item .banner_a.bl {
+  background: url("../images/slide_02_2000x410.jpg") center;
+}
+.banner .item .banner_a.cl {
+  background: url("../images/slide_03_2000x410.jpg") center;
+}
+.banner .item .banner_a.dl {
+  background: url("../images/slide_04_2000x410.jpg") center;
+}
+/*信息部分*/
+.info {
+  padding-top: 10px;
+}
+.info .container {
+  max-width: 910px;
+  margin: 10px auto;
+}
+.info .container .row > div {
+  padding-left: 70px;
+  margin-bottom: 20px;
+}
+.info .container .media a {
+  color: gray;
+}
+.info .container .media a:hover {
+  color: red;
+}
+.info .media .ico {
+  font-size: 30px;
+}
+/*预约界面*/
+.book {
+  background: #eee;
+  border: 1px solid #aaa;
+  padding: 20px 0 20px 0;
+}
+.book .pull-left .fast {
+  color: red;
+  border-bottom: 1px dashed red;
+}
+/*tab标签栏*/
+.wjs-tabs {
+  border-bottom: 1px solid #ddd;
+}
+.tuijian .wjs-tabs > li {
+  float: left;
+  margin-bottom: -1px;
+}
+.tuijian .wjs-tabs > li > a {
+  margin-right: 2px;
+  line-height: 1.42857143;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+  color: #777;
+}
+.tuijian .wjs-tabs > li > a:hover {
+  background: #fff;
+}
+.tuijian .wjs-tabs > li.active > a,
+.tuijian .wjs-tabs > li.active > a:hover,
+.tuijian .wjs-tabs > li.active > a:focus {
+  color: #555;
+  cursor: default;
+  border-bottom-color: transparent;
+  border-bottom: 3px solid red;
+  background: skyblue;
+}
+.tuijian .wjs-tabs.nav-justified {
+  width: 100%;
+  border-bottom: 0;
+}
+.tuijian .wjs-tabs.nav-justified > li {
+  float: none;
+}
+.tuijian .wjs-tabs.nav-justified > li > a {
+  margin-bottom: 5px;
+  text-align: center;
+}
+.tuijian .wjs-tabs.nav-justified > .dropdown .dropdown-menu {
+  top: auto;
+  left: auto;
+}
+@media (min-width: 768px) {
+  .tuijian .wjs-tabs.nav-justified > li {
+    display: table-cell;
+    width: 1%;
+  }
+  .tuijian .wjs-tabs.nav-justified > li > a {
+    margin-bottom: 0;
+  }
+}
+.tuijian .wjs-tabs.nav-justified > li > a {
+  margin-right: 0;
+  border-radius: 4px;
+}
+.tuijian .wjs-tabs.nav-justified > .active > a,
+.tuijian .wjs-tabs.nav-justified > .active > a:hover,
+.tuijian .wjs-tabs.nav-justified > .active > a:focus {
+  border: 1px solid #ddd;
+}
+@media (min-width: 768px) {
+  .tuijian .wjs-tabs.nav-justified > li > a {
+    border-bottom: 1px solid #ddd;
+    border-radius: 4px 4px 0 0;
+  }
+  .tuijian .wjs-tabs.nav-justified > .active > a,
+  .tuijian .wjs-tabs.nav-justified > .active > a:hover,
+  .tuijian .wjs-tabs.nav-justified > .active > a:focus {
+    border-bottom-color: #fff;
+  }
+}
+/*里面自己添加的内容*/
+.tuijian .tab-content {
+  margin: 20px auto;
+  border-bottom: 1px solid #aaa;
+}
+.tab-content .row > div a.yhq {
+  display: block;
+  background: #FF4D4D;
+  box-shadow: 2px 2px 2px 2px #aaa;
+  margin-bottom: 15px;
+  color: white;
+}
+.tab-content .row > div a.yhq:hover {
+  text-decoration: none;
+}
+.tab-content .row > div a.yhq .right {
+  float: right;
+  min-height: 150px;
+  width: 108px;
+  text-align: center;
+  padding-top: 30px;
+  border-left: 1px dashed #fff;
+  position: relative;
+  font-weight: 900;
+}
+.tab-content .row > div a.yhq .right p {
+  margin: 0 auto;
+}
+.tab-content .row > div a.yhq .right::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  box-shadow: 1px 2px 1px 2px #aaa;
+  top: 0;
+  margin-top: -8px;
+  left: 0;
+  margin-left: -8px;
+  border-radius: 50%;
+}
+.tab-content .row > div a.yhq .right::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  box-shadow: 1px 2px 1px 2px #aaa;
+  bottom: 0;
+  margin-bottom: -8px;
+  left: 0;
+  margin-left: -8px;
+  border-radius: 50%;
+}
+.tab-content .row > div a.yhq .left {
+  min-height: 150px;
+  overflow: hidden;
+  position: relative;
+}
+.tab-content .row > div a.yhq .left .ico {
+  position: absolute;
+  font-size: 50px;
+}
+.tab-content .row > div a.yhq .left h3 {
+  text-align: center;
+  margin-top: 13px;
+}
+.tab-content .row > div a.yhq .left div {
+  margin-bottom: 6px;
+}
+.tab-content .row > div a.yhq .left div p {
+  margin: 3px auto;
+  font-weight: 900;
+}
+.tab-content .row > div a.yhq .left div p.start {
+  font-size: 13px;
+}
+.tab-content .row > div a.yhq .left div p.money {
+  font-size: 12px;
+}
+.tab-content .row > div a.yhq .left div:nth-child(even) {
+  text-align: right;
+}
+.tab-content .tab-pane .row > div .a2.yhq,
+.tab-content .tab-pane .row > div .a3.yhq,
+.tab-content .tab-pane .row > div .a4.yhq {
+  background: #eee;
+  color: #888;
+  box-shadow: 2px 2px 2px 2px #aaa;
+}
+.tab-content .tab-pane .row > div .a2.yhq .right,
+.tab-content .tab-pane .row > div .a3.yhq .right,
+.tab-content .tab-pane .row > div .a4.yhq .right {
+  border-left-color: #555;
+}
+.tab-content .tab-pane .row > div .a2.yhq .left div:nth-child(2n+1) p,
+.tab-content .tab-pane .row > div .a3.yhq .left div:nth-child(2n+1) p,
+.tab-content .tab-pane .row > div .a4.yhq .left div:nth-child(2n+1) p {
+  text-align: right;
+  overflow: hidden;
+}
+.tab-content .tab-pane .row > div .a2.yhq .left div:nth-child(2n) p,
+.tab-content .tab-pane .row > div .a3.yhq .left div:nth-child(2n) p,
+.tab-content .tab-pane .row > div .a4.yhq .left div:nth-child(2n) p {
+  text-align: left;
+  overflow: hidden;
+}
+/*全部新闻部分*/
+.news .title {
+  font-size: 26px;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #aaa;
+  text-align: center;
+  position: relative;
+}
+.news .title::before,
+.news .title::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  bottom: 0;
+  margin-bottom: -5px;
+  border-radius: 50%;
+  border: 1px solid #aaa;
+  background: #fff;
+}
+.news .title::before {
+  left: 0;
+}
+.news .title::after {
+  right: 0;
+}
+/*新闻部分*/
+.my-tabs {
+  position: relative;
+  overflow: hidden;
+}
+.my-tabs .line {
+  position: absolute;
+  border: 1px dashed #999;
+  left: 35px;
+  height: 80%;
+}
+.my-tabs > li {
+  margin-bottom: -1px;
+}
+.my-tabs > li > a {
+  margin-right: 2px;
+  line-height: 1.42857143;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 50%;
+  background: #ccc;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.my-tabs > li > a span {
+  font-size: 40px;
+}
+.my-tabs > li > a:hover {
+  background: #ccc;
+}
+.my-tabs > li.active > a,
+.my-tabs > li.active > a:hover,
+.my-tabs > li.active > a:focus {
+  color: #fff;
+  cursor: default;
+  background-color: red;
+  border: 1px solid #ddd;
+}
+.my-tabs.nav-justified {
+  width: 100%;
+  border-bottom: 0;
+}
+.my-tabs.nav-justified > li {
+  float: none;
+}
+.my-tabs.nav-justified > li > a {
+  margin-bottom: 5px;
+  text-align: center;
+}
+.my-tabs.nav-justified > .dropdown .dropdown-menu {
+  top: auto;
+  left: auto;
+}
+@media (min-width: 768px) {
+  .my-tabs.nav-justified > li {
+    display: table-cell;
+    width: 1%;
+  }
+  .my-tabs.nav-justified > li > a {
+    margin-bottom: 0;
+  }
+}
+.my-tabs.nav-justified > li > a {
+  margin-right: 0;
+  border-radius: 4px;
+}
+.my-tabs.nav-justified > .active > a,
+.my-tabs.nav-justified > .active > a:hover,
+.my-tabs.nav-justified > .active > a:focus {
+  border: 1px solid #ddd;
+}
+@media (min-width: 768px) {
+  .my-tabs.nav-justified > li > a {
+    border-bottom: 1px solid #ddd;
+    border-radius: 4px 4px 0 0;
+  }
+  .my-tabs.nav-justified > .active > a,
+  .my-tabs.nav-justified > .active > a:hover,
+  .my-tabs.nav-justified > .active > a:focus {
+    border-bottom-color: #fff;
+  }
+}
+.news .tab-content .home {
+  margin-top: 40px;
+}
+.news .tab-content .profile {
+  margin-top: 40px;
+}
+.news .tab-content li {
+  height: 30px;
+  line-height: 30px;
+  list-style: none;
+}
+.news .tab-content li a {
+  text-decoration: none;
+  color: #999;
+}
+.news #settings1 {
+  border: 1px solid #bbb;
+  width: 70%;
+  margin-top: 100px;
+}
+.news #settings1 .first {
+  height: 40px;
+  line-height: 40px;
+  overflow: hidden;
+  padding: 5px 10px;
+  border-bottom: 1px solid #aaa;
+}
+.news #settings1 .first h4 {
+  float: left;
+}
+.news #settings1 .first h4 a {
+  color: #999;
+}
+.news #settings1 .first a {
+  float: right;
+  color: #bbb;
+  text-decoration: none;
+}
+.news #messages1 a .container-fluid .bigrow {
+  min-height: 300px;
+}
+.news #messages1 a .container-fluid .bigrow .left {
+  color: #fff;
+  min-height: 300px;
+  background: url("../images/novice.png") no-repeat center;
+  background-size: cover;
+  position: relative;
+}
+.news #messages1 a .container-fluid .bigrow .left:hover {
+  box-shadow: 0 1px 1px 2px #aaa;
+  border-right: 3px solid #aaa;
+}
+.news #messages1 a .container-fluid .bigrow .left h3 {
+  text-align: center;
+}
+.news #messages1 a .container-fluid .bigrow .left .month {
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  bottom: 50px;
+  left: 50%;
+  margin-left: -50px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 102, 0.4);
+}
+.news #messages1 a .container-fluid .bigrow .left span {
+  position: absolute;
+  bottom: 15px;
+  font-size: 12px;
+}
+.news #messages1 a .container-fluid .bigrow .left .order {
+  left: 10px;
+}
+.news #messages1 a .container-fluid .bigrow .left .more {
+  right: 10px;
+}
+.news #messages1 a .container-fluid .bigrow .right {
+  min-height: 300px;
+  background-color: #eee;
+  color: #777;
+  position: relative;
+  overflow: hidden;
+}
+.news #messages1 a .container-fluid .bigrow .right:hover {
+  box-shadow: 1px 2px 2px 2px #aaa;
+}
+.news #messages1 a .container-fluid .bigrow .right .top {
+  margin-top: 10px;
+}
+.news #messages1 a .container-fluid .bigrow .right .top h4 {
+  display: inline-block;
+  margin-bottom: 0;
+}
+.news #messages1 a .container-fluid .bigrow .right .top span {
+  position: absolute;
+  left: 130px;
+  top: 15px;
+  width: 70px;
+  height: 25px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 15px;
+  background: rgba(200, 160, 210, 0.8);
+}
+.news #messages1 a .container-fluid .bigrow .right .top button {
+  position: absolute;
+  top: 20px;
+  padding: 1px 4px;
+  border-radius: 20px;
+}
+.news #messages1 a .container-fluid .bigrow .right .top button.protect {
+  right: 60px;
+  margin-right: 5px;
+}
+.news #messages1 a .container-fluid .bigrow .right .top button.offset {
+  right: 38px;
+}
+.news #messages1 a .container-fluid .bigrow .right .center {
+  margin-top: 20px;
+  position: relative;
+}
+.news #messages1 a .container-fluid .bigrow .right .center .container-fluid .smallrow div {
+  border-right: 1px dashed red;
+  text-align: center;
+}
+.news #messages1 a .container-fluid .bigrow .right .center .container-fluid .smallrow div p span {
+  font-size: 30px;
+}
+.news #messages1 a .container-fluid .bigrow .right .center .container-fluid .smallrow div.last {
+  border: none;
+}
+.news #messages1 a .container-fluid .bigrow .right .center .cell {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 2px solid red;
+  border-radius: 50%;
+  color: red;
+  font-size: 25px;
+  left: 50%;
+  margin-left: -100px;
+  top: 50%;
+  margin-top: 0;
+  line-height: 100px;
+  text-align: center;
+  transform: rotate(-32deg);
+}
+.news #messages1 a .container-fluid .bigrow .right .bottom button {
+  width: 200px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  background-color: skyblue;
+  margin-left: -100px;
+  border: none;
+}
+.footer {
+  background: #222;
+  opacity: 0.8;
+  color: #fff;
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+.footer .link {
+  border-bottom: 1px dashed #eee;
+  padding-bottom: 10px;
+}
+.footer .link .container-fluid .footrow .left {
+  position: relative;
+}
+.footer .link .container-fluid .footrow .left .l1 {
+  font-size: 30px;
+}
+.footer .link .container-fluid .footrow .left .l1 span:first-child {
+  color: #D90000;
+}
+.footer .link .container-fluid .footrow .left .l2 {
+  width: 87%;
+  /*字符串间隔*/
+  letter-spacing: 2px;
+  border: 1px solid #eee;
+  line-height: 30px;
+  font-size: 25px;
+  padding: 10px;
+  text-align: center;
+}
+.footer .link .container-fluid .footrow .left .l3 {
+  margin: 10px auto;
+}
+.footer .link .container-fluid .footrow .left .l4 a {
+  color: #fff;
+}
+.footer .link .container-fluid .footrow .left .l4 a:hover {
+  text-decoration: none;
+}
+.footer .link .container-fluid .footrow .left .l4 a svg {
+  margin-right: 5px;
+  color: red;
+}
+.footer .link .container-fluid .footrow .left .l5 {
+  margin-top: 10px;
+}
+.footer .link .container-fluid .footrow .left .l6 {
+  position: absolute;
+  left: 235px;
+  top: 160px;
+}
+.footer .link .container-fluid .footrow .center {
+  padding: 5px;
+}
+.footer .link .container-fluid .footrow .center dl {
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+.footer .link .container-fluid .footrow .center dl dd {
+  font-size: 18px;
+}
+.footer .link .container-fluid .footrow .center dl dt {
+  height: 40px;
+  line-height: 40px;
+}
+.footer .link .container-fluid .footrow .center dl dt a {
+  display: block;
+  color: #fff;
+  font-weight: 500;
+  font-family: "宋体";
+}
+.footer .link .container-fluid .footrow .center dl dt a:hover {
+  font-Weight: 700;
+}
+.footer .link .container-fluid .footrow .right {
+  padding: 5px;
+}
+.footer .link .container-fluid .footrow .right dl dd {
+  font-size: 18px;
+}
+.footer .link .container-fluid .footrow .right dl dt {
+  float: left;
+  background-color: #aaa;
+  margin: 5px 10px 15px 0;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+}
+.footer .link .container-fluid .footrow .right dl dt a {
+  color: #585453;
+  font-size: 60px;
+}
+.footer .link .container-fluid .footrow .right dl dt a:hover {
+  color: green;
+  text-decoration: none;
+}
+.footer .friend .bottomrow {
+  padding: 10px 150px;
+}
+.footer .friend .bottomrow div {
+  margin-right: 30px;
+}
+.footer .friend .bottomrow div a {
+  font-size: 80px;
+  color: #aaa;
+}
+.footer .friend .bottomrow div a:hover {
+  text-decoration: none;
+  color: orange;
+}
